@@ -23,18 +23,14 @@ app.get("/download", (req, res) => {
 		__dirname,
 		"public",
 		"images",
-		"Limited Edition Mint Chip Oreos Front of Package.jpeg"
+		"lightside_lightsaber.jpg"
 	); // Path to the image file
-	res.download(
-		filePath,
-		"Limited Edition Mint Chip Oreos Front of Package.jpeg",
-		(err) => {
-			if (err) {
-				console.error("Error downloading file:", err);
-				res.status(500).send("Error downloading the file.");
-			}
+	res.download(filePath, "lightside_lightsaber.jpg", (err) => {
+		if (err) {
+			console.error("Error downloading file:", err);
+			res.status(500).send("Error downloading the file.");
 		}
-	);
+	});
 });
 app.listen(3000, () => {
 	console.log("Express is running on port 3000");

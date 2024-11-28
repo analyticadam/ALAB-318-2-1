@@ -7,19 +7,21 @@
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 	</head>
 	<body>
-		<h1><%= title %></h1>
-		<p>Welcome to <%= title %></p>
-		<form action="/darksideRouter/submit" method="POST">
+		<h1 class="dark-title"><%= title %></h1>
+		<form action="/darksideRouter/submit" method="POST" class="darkside-form">
 			<input
 				type="text"
 				id="star"
 				name="star"
-				placeholder="Enter your name here"
 				required
+				placeholder="Enter your name here, oh wise one...he-he-he"
+				class="darkside-form"
 			/>
-			<button type="submit">Submit to the Dark Side!</button>
+			<button type="submit" class="dark-side-button">
+				Submit to the Dark Side!
+			</button>
 		</form>
-		<a href="http://localhost:3000/lightsideRouter">Light Side</a>
-		<a href="http://localhost:3000/darksideRouter">Dark Side</a>
+		<a href="/lightsideRouter" class="link light-side">Light Side</a>
+		<a href="/" class="link star-wars-land">Back to Star Wars Land</a>
 	</body>
 </html>

@@ -7,17 +7,8 @@
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 	</head>
 	<body>
-		<h1><%= title %></h1>
-		<p>Welcome to <%= title %></p>
-		<form action="/download" method="GET">
-			<label
-				>Purchase the Force for a steal of a deal for a limited time
-				only!</label
-			>
-			<button type="submit">Purchase the Force for $99.99</button>
-		</form>
-
-		<a href="http://localhost:3000/lightsideRouter">Light Side</a>
-		<a href="http://localhost:3000/darksideRouter">Dark Side</a>
+		<h1 class="light-title"><%= title %></h1>
+		<a href="/darksideRouter" class="link dark-side">Dark Side</a>
+		<a href="/" class="link star-wars-land">Back to Star Wars Land</a>
 	</body>
 </html>

@@ -1,0 +1,217 @@
+@font-face {
+	font-family: "StarJedi";
+	src: url("/fonts/Starjedi.ttf") format("truetype");
+}
+
+/* General Body Styling */
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /* Full viewport height */
+	margin: 0;
+	background-image: url("../images/star\ wars\ galaxy\ background.jpg"); /* Galaxy background */
+	background-size: cover; /* Ensure the image covers the entire page */
+	background-position: center;
+	background-attachment: fixed; /* Makes the background stay in place when scrolling */
+	color: #fff; /* Default white text */
+	font-family: "Arial", sans-serif; /* Use a clean font */
+	position: relative; /* Required for pseudo-element */
+}
+
+body::after {
+	content: ""; /* Pseudo-element for overlay */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(
+		0,
+		0,
+		0,
+		0.6
+	); /* Darken the background for better readability */
+	z-index: -1; /* Push overlay behind all content */
+}
+
+/* Container for Centering Content */
+.container {
+	text-align: center;
+	padding: 20px;
+	max-width: 800px;
+}
+
+/* Main Title Styling (Light Side Default) */
+h1 {
+	font-family: "StarJedi", sans-serif;
+	text-align: center;
+	font-size: 3rem; /* Large title size */
+	font-weight: bold; /* Bold text */
+	color: #ffcc00; /* Star Wars yellow */
+	text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; /* Softer glow effect */
+	margin-top: 20px;
+}
+
+/* Dark Side Title Styling */
+.dark-title {
+	color: #d90000; /* Sith red */
+	text-shadow: 0 0 10px #d90000, 0 0 20px #d90000; /* Stronger red glow */
+}
+
+/* Paragraph Styling */
+p {
+	text-align: center; /* Center-align text */
+	font-size: 1.2rem; /* Moderate font size */
+	color: #ffffff; /* White color */
+	line-height: 1.5; /* Better line spacing */
+	margin: 15px 0;
+}
+
+/* Styling for the Wookie Cookies Image */
+.cookie-image {
+	width: 300px; /* Set image width */
+	height: auto; /* Maintain aspect ratio */
+	display: block; /* Center the image */
+	margin: 20px auto; /* Add margin and center horizontally */
+	border: 3px solid #ffcc00; /* Add a soft yellow border */
+	border-radius: 10px; /* Round corners */
+	box-shadow: 0 0 8px #ffcc00; /* Subtle glowing effect */
+}
+
+/* General Link Styling */
+.link {
+	display: inline-block; /* Makes links behave like buttons */
+	margin: 10px 20px;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	text-decoration: none; /* Removes underline */
+	text-transform: uppercase; /* Makes text all uppercase */
+	font-weight: bold; /* Bold text */
+	border-radius: 5px; /* Rounded corners */
+	transition: all 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+/* Light Side Link Styling */
+.light-side {
+	color: #000; /* Black text */
+	background-color: #ffffff; /* White background */
+	border: 2px solid #ffffff; /* White border */
+	box-shadow: 0 0 8px #ffffff; /* Subtle glow */
+}
+
+.light-side:hover {
+	background-color: #e6e6e6; /* Slightly darker on hover */
+	color: #000;
+	box-shadow: 0 0 12px #ffffff, 0 0 20px #ffffff; /* Stronger glow on hover */
+}
+
+/* Dark Side Link Styling */
+.dark-side {
+	color: #fff; /* White text */
+	background-color: #d90000; /* Sith red background */
+	border: 2px solid #ff0000; /* Red border */
+	box-shadow: 0 0 8px #ff0000; /* Subtle red glow */
+}
+
+.dark-side:hover {
+	background-color: #ff0000; /* Brighter red on hover */
+	color: #fff;
+	box-shadow: 0 0 12px #ff0000, 0 0 20px #ff0000; /* Stronger glow on hover */
+}
+
+/* Back to Star Wars Land Link */
+.star-wars-land {
+	color: #ffcc00; /* Star Wars yellow */
+	background-color: transparent;
+	text-decoration: none;
+	font-weight: bold;
+	border: 2px solid #ffcc00; /* Yellow border */
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+.star-wars-land:hover {
+	color: #fff; /* White text on hover */
+	background-color: #ffcc00; /* Yellow background on hover */
+}
+
+/* Link Container Styling */
+.link-container {
+	display: flex;
+	justify-content: center; /* Center links horizontally */
+	gap: 20px; /* Space between links */
+	margin-top: 20px; /* Add spacing from other elements */
+}
+
+/* Light Side Button Styling */
+.light-side-button {
+	color: #000; /* Black text */
+	background-color: #ffffff; /* White background */
+	border: 2px solid #ffffff; /* White border */
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0 0 8px #ffffff; /* Subtle glow */
+	transition: all 0.3s ease-in-out;
+}
+
+.light-side-button:hover {
+	background-color: #e6e6e6; /* Slightly darker white */
+	box-shadow: 0 0 12px #ffffff, 0 0 20px #ffffff; /* Stronger glow */
+}
+
+/* Dark Side Form Styling */
+.darkside-form {
+	display: flex;
+	flex-direction: column; /* Arrange input and button vertically */
+	justify-content: center; /* Center vertically */
+	align-items: center; /* Center horizontally */
+	margin: 20px auto; /* Center on the page */
+	width: 100%; /* Allow flexibility */
+	max-width: 500px; /* Longer width for the text box */
+	padding: 20px; /* Add padding for better spacing */
+	background: rgba(0, 0, 0, 0.8); /* Slightly darken the form background */
+	border-radius: 10px; /* Rounded corners */
+	box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Sith-like glow effect */
+}
+
+/* Input Field Styling */
+.darkside-form input {
+	margin-bottom: 15px; /* Space between input and button */
+	padding: 10px;
+	font-size: 1rem;
+	width: 100%; /* Full width */
+	max-width: 500px; /* Limit input width */
+	border: 2px solid #ff0000; /* Sith red border */
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Subtle red glow */
+}
+
+/* Input Placeholder Styling */
+.darkside-form input::placeholder {
+	color: #ffaaaa; /* Light red placeholder text */
+	font-style: italic; /* Make placeholder text italic */
+	opacity: 0.8; /* Slight transparency */
+}
+
+/* Dark Side Button Styling */
+.dark-side-button {
+	color: #fff;
+	background-color: #d90000; /* Sith red */
+	border: 2px solid #ff0000;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); /* Sith glow */
+	transition: all 0.3s ease-in-out;
+}
+
+.dark-side-button:hover {
+	background-color: #ff0000; /* Brighter red */
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.8); /* Stronger glow */
+}
