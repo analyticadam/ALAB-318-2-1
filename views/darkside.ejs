@@ -10,10 +10,15 @@
 		<h1><%= title %></h1>
 		<p>Welcome to <%= title %></p>
 		<form action="/darksideRouter/submit" method="POST">
-			<input type="text" id="star" name="star" required />
+			<input
+				type="text"
+				id="star"
+				name="star"
+				placeholder="Enter your name here"
+				required
+			/>
 			<button type="submit">Submit to the Dark Side!</button>
 		</form>
-
 		<a href="http://localhost:3000/lightsideRouter">Light Side</a>
 		<a href="http://localhost:3000/darksideRouter">Dark Side</a>
 	</body>
