@@ -18,13 +18,22 @@ app.use("/", indexRouter);
 app.use("/lightsideRouter", lightsideRouter);
 app.use("/darksideRouter", darksideRouter);
 app.get("/download", (req, res) => {
-	const filePath = path.join(__dirname, "public", "images", ".jpg"); // Path to the image file
-	res.download(filePath, ".jpg", (err) => {
-		if (err) {
-			console.error("Error downloading file:", err);
-			res.status(500).send("Error downloading the file.");
+	const filePath = path.join(
+		__dirname,
+		"public",
+		"images",
+		"Limited Edition Mint Chip Oreos Front of Package.jpeg"
+	); // Path to the image file
+	res.download(
+		filePath,
+		"Limited Edition Mint Chip Oreos Front of Package.jpeg",
+		(err) => {
+			if (err) {
+				console.error("Error downloading file:", err);
+				res.status(500).send("Error downloading the file.");
+			}
 		}
-	});
+	);
 });
 app.listen(3000, () => {
 	console.log("Express is running on port 3000");
