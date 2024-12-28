@@ -44,14 +44,17 @@ body::after {
 }
 
 /* Main Title Styling (Light Side Default) */
+/* Star Wars Font with Enhanced 3D Effect */
 h1 {
-	font-family: "StarJedi", sans-serif;
-	text-align: center;
-	font-size: 3rem; /* Large title size */
-	font-weight: bold; /* Bold text */
+	font-family: "StarJedi", sans-serif; /* Star Wars font */
+	font-size: 3rem; /* Adjust font size as needed */
+	font-weight: bold;
 	color: #ffcc00; /* Star Wars yellow */
-	text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; /* Softer glow effect */
-	margin-top: 20px;
+	text-shadow: 2px 2px 0 #000, /* Solid black shadow for depth */ 4px 4px 0 #333,
+		/* Slightly lighter shadow for a layered effect */ 1px 1px 10px #ffcc00; /* Soft glow for the Star Wars vibe */
+	text-rendering: optimizeLegibility; /* Improve text clarity */
+	-webkit-font-smoothing: antialiased; /* Smooth text edges */
+	letter-spacing: 2px; /* Slight spacing for readability */
 }
 
 /* Dark Side Title Styling */
@@ -189,6 +192,8 @@ p {
 	border: 2px solid #ff0000; /* Sith red border */
 	border-radius: 5px;
 	box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Subtle red glow */
+	background-color: rgba(0, 0, 0, 0.8); /* Dark background for input */
+	color: #ffffff; /* White text for contrast */
 }
 
 /* Input Placeholder Styling */

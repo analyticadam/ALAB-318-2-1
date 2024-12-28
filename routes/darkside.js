@@ -1,17 +1,20 @@
 const express = require("express");
 const router = express.Router();
-// localhost:3000/darksideRouter
+
+// Route: Render the Dark Side page
+// URL: localhost:3000/darksideRouter
 router.get("/", (req, res) => {
 	res.render("darkside", { title: "Welcome to the Dark Side of the Force!" });
 });
 
-// Handles the form submission and renders the "cookies" page
-// localhost:3000/darksideRouter/submit
+// Route: Handle form submission and render the "cookies" page
+// URL: localhost:3000/darksideRouter/submit
 router.post("/submit", (req, res) => {
-	console.log(req.body);
-	const star = req.body.star; // Get the submitted "star" value
-	res.render("submit", { star }); // Pass it to the submit.ejs view
-	res.send("We've got cookies for you!");
+	console.log(req.body); // Log the submitted form data
+	const star = req.body.star; // Extract the "star" value from the request body
+
+	// Render the "submit" view with the submitted data
+	res.render("submit", { star });
 });
 
 module.exports = router;
