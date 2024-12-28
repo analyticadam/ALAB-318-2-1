@@ -82,6 +82,7 @@ This application leverages **Node.js**, **Express**, and **EJS templates** to cr
 
 4. **Open the Application**:
    - Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+   - Alternatively, view the live application at [https://alab-318-2-1-star-wars-dark-side-form.onrender.com/](https://alab-318-2-1-star-wars-dark-side-form.onrender.com/).
 
 ---
 
